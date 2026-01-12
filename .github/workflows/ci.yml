@@ -26,9 +26,8 @@ jobs:
         run: ./gradlew assemble
         
       - name: Upload Release Artifact
-        working-directory: ${{ env.PROJECT_PATH }}
         uses: actions/upload-artifact@v4
         with:
           name: release-${{ env.BUILD_TIME }}
-          path: app/build/outputs/apk/debug/*.apk
+          path: ${{ env.PROJECT_PATH }}/app/build/outputs/apk/debug/*.apk
 
