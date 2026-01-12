@@ -85,6 +85,7 @@ public class MainMenu extends AppCompatActivity {
     private Button mWriteTag;
     private Button mKeyEditor;
     private Button mDumpEditor;
+    private Button mUsbDevice;
     private Intent mOldIntent = null;
 
     /**
@@ -140,6 +141,8 @@ public class MainMenu extends AppCompatActivity {
         mWriteTag = findViewById(R.id.buttonMainWriteTag);
         mKeyEditor = findViewById(R.id.buttonMainEditKeyDump);
         mDumpEditor = findViewById(R.id.buttonMainEditCardDump);
+        mUsbDevice = findViewById(R.id.buttonMainUsbDevice);
+
 
         initFolders();
         copyStdKeysFiles();
@@ -781,6 +784,20 @@ public class MainMenu extends AppCompatActivity {
     public void onShowTools(View view) {
         openContextMenu(view);
     }
+
+/**
+ * 跳转到 USB 设备 Activity。
+ * @param view 触发点击的视图。
+ */
+public void onShowUsbDevice(View view) {
+    // TODO: 创建并跳转到你处理 USB 通信的 Activity
+    // Intent intent = new Intent(this, UsbDeviceActivity.class);
+    // startActivity(intent);
+    
+    // 临时提示
+    Toast.makeText(this, "正在检测 USB 读卡器...", Toast.LENGTH_SHORT).show();
+}
+
 
     /**
      * Open a file chooser ({@link FileChooser}). The
