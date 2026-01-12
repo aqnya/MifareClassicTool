@@ -116,6 +116,26 @@
                     android:text="@string/action_help" />
 
             </LinearLayout>
+<LinearLayout
+    android:id="@+id/linearLayoutMainMenuRow4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/buttonMainUsbDevice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:drawableTop="@android:drawable/ic_menu_share" 
+        android:onClick="onShowUsbDevice"
+        android:text="使用 USB 设备" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5" />
+
+</LinearLayout>
 
         </LinearLayout>
     </ScrollView>
